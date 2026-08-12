@@ -2,7 +2,7 @@
 #include<string>
 
 using namespace std;
-
+ void in();
 class Student
 {
     private:
@@ -10,7 +10,7 @@ class Student
     int rollno;
     float marks;
 
-    public:
+    //public:
     void in()
     {
         cout<<"Enter Name:"<<endl;
@@ -20,8 +20,10 @@ class Student
         cout<<"Enter Marks:";
         cin>>marks;
     }
+    public:
     void out()
     {
+        in();
         cout<<"Student details:";
         cout<<"Name:"<<name<<endl;
         cout<<"Roll no:"<<rollno<<endl;
@@ -32,9 +34,14 @@ class Student
 int main()
 {
     Student s;
-    s.in();
+    //s.in();
+    in();
     s.out();
 
     return 0;
+}
+void in()
+{
+    cout<<"calling a method outside the class";
 }
  
