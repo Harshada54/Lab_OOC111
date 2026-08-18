@@ -42,6 +42,6 @@ int main()
 }
 void in()
 {
-    cout<<"calling a method outside the class";
+    cout<<"calling a method outside the class\n";
 }
  
