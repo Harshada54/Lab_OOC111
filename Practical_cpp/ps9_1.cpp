@@ -1,4 +1,5 @@
 #include <iostream> 
+using namespace std;
 class Vehicle {
  public:
     virtual void start() const = 0;
@@ -7,21 +8,21 @@ class Vehicle {
 class Car : public Vehicle {
  public:
     void start() const override {
-        std::cout << "Car: Key inserted, engine started." << std::endl;
+        cout << "Car: Key inserted, engine started." <<endl;
     }
 
     void stop() const override {
-        std::cout << "Car: Brakes applied, engine stopped." << std::endl;
+        cout << "Car: Brakes applied, engine stopped." <<endl;
     }
 };
 
 class Bike : public Vehicle {
  public:
     void start() const override {
-        std::cout << "Bike: Kick started, engine revving." << std::endl;
+        cout << "Bike: Kick started, engine revving." <<endl;
     }
     void stop() const override {
-        std::cout << "Bike: Hand brake pulled, engine stopped." << std::endl;
+        cout << "Bike: Hand brake pulled, engine stopped." <<endl;
     }
 };
 
@@ -30,11 +31,11 @@ int main() {
     Bike myBike;
     Vehicle* v1 = &myCar;
     Vehicle* v2 = &myBike;
-    std::cout << "=== Vehicle 1 (Car) ===" << std::endl;
+    cout << "=== Vehicle 1 (Car) ===" <<endl;
     v1->start();
     v1->stop();
 
-    std::cout << "\n=== Vehicle 2 (Bike) ===" << std::endl;
+    cout << "\n=== Vehicle 2 (Bike) ===" <<endl;
     v2->start();
     v2->stop();
 
